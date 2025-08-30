@@ -1,3 +1,44 @@
+@use './header';
+@use './card';
+@use './stars';
+@use './variables' as *;
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap';
+
 body {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
   margin: 0;
+
+  font-family: Roboto, sans-serif;
+}
+
+@mixin grid-respond-to($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+.catalog {
+  width: 100vw;
+  padding: 50px 40px;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-gap: 48px 46px;
+  justify-items: center;
+  grid-template-columns: 1fr;
+
+  @include grid-respond-to(448px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include grid-respond-to(768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include grid-respond-to(1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
