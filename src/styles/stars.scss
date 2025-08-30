@@ -6,10 +6,12 @@
   width: ($stars-size + 4px) * 5;
 
   &__star {
-    width: $stars-size;
-    height: $stars-size;
+    width: $stars-size - 4px;
+    height: $stars-size - 4px;
     background-image: url(../images/star.svg);
     background-size: cover;
+    margin: 2px;
+    display: block;
   }
 
   @for $count from 1 through 5 {
