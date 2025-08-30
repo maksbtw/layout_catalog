@@ -5,3 +5,10 @@ $color-text-hovered: #34568b;
 $stars-size: 16px;
 $second-color: #00acdc;
 $header-height: 60px;
+$card-width: 200px;
+$transition-duration: 0.3s;
+$breakpoints: (
+  sm: 448px,
+  md: 768px,
+  lg: 1024px,
+);

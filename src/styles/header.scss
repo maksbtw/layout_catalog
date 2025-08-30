@@ -38,7 +38,7 @@
     line-height: $header-height;
     font-size: 12px;
     display: inline-block;
-    transition: color 0.3s;
+    transition: color $transition-duration;
 
     &:hover {
       color: $color-primary;

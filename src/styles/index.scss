@@ -30,15 +30,15 @@ body {
   justify-items: center;
   grid-template-columns: 1fr;
 
-  @include grid-respond-to(448px) {
+  @include grid-respond-to(map-get($breakpoints, 'sm')) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include grid-respond-to(768px) {
+  @include grid-respond-to(map-get($breakpoints, 'md')) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @include grid-respond-to(1024px) {
+  @include grid-respond-to(map-get($breakpoints, 'lg')) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
